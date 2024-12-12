@@ -5,7 +5,7 @@ postman 手動測試檔
 test_products_api.py        # python測試檔
 
 
-requirements.txt            # Python dependencies
+requirements.txt            
 
 
 
