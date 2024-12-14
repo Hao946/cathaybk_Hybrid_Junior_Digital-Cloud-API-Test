@@ -1,0 +1,373 @@
+{
+	"id": "04a1617d-9939-40b8-8380-31d3ddc16c50",
+	"name": "API documentation",
+	"timestamp": "2024-12-14T07:21:09.117Z",
+	"collection_id": "24596075-ac13c772-3ba3-489f-9efe-e18d4d3d0fe8",
+	"folder_id": 0,
+	"environment_id": "24596075-e1458d91-e23c-435c-9f57-1ca53fa2dc2c",
+	"totalPass": 21,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-12-14T07:20:41.162Z",
+	"totalFail": 6,
+	"results": [
+		{
+			"id": "b8f70e35-80a4-4672-ae03-ba389fac4b57",
+			"name": "測試案例1",
+			"url": "https://api.practicesoftwaretesting.com/products?between=price%2C10%2C20",
+			"time": 861,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Products are within price range 10 to 20": true
+			},
+			"testPassFailCounts": {
+				"Products are within price range 10 to 20": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				951,
+				901,
+				861
+			],
+			"allTests": [
+				{
+					"Products are within price range 10 to 20": true
+				},
+				{
+					"Products are within price range 10 to 20": true
+				},
+				{
+					"Products are within price range 10 to 20": true
+				}
+			]
+		},
+		{
+			"id": "b5a7d3cd-6ffb-435d-99e7-3727ff37d0d3",
+			"name": "測試案例2",
+			"url": "https://api.practicesoftwaretesting.com/products?sort=name%2Casc",
+			"time": 881,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Products are sorted by name in ascending order": true
+			},
+			"testPassFailCounts": {
+				"Products are sorted by name in ascending order": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				905,
+				908,
+				881
+			],
+			"allTests": [
+				{
+					"Products are sorted by name in ascending order": true
+				},
+				{
+					"Products are sorted by name in ascending order": true
+				},
+				{
+					"Products are sorted by name in ascending order": true
+				}
+			]
+		},
+		{
+			"id": "7c1e87f3-da87-4c35-a883-bd94eafbd82c",
+			"name": "測試案例3",
+			"url": "https://api.practicesoftwaretesting.com/products?sort=name%2Cdesc",
+			"time": 882,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Products are sorted by name in descending order": true
+			},
+			"testPassFailCounts": {
+				"Products are sorted by name in descending order": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				907,
+				912,
+				882
+			],
+			"allTests": [
+				{
+					"Products are sorted by name in descending order": true
+				},
+				{
+					"Products are sorted by name in descending order": true
+				},
+				{
+					"Products are sorted by name in descending order": true
+				}
+			]
+		},
+		{
+			"id": "4fb4773c-b5a8-47ea-9fc8-60cf64f4ef50",
+			"name": "測試案例4",
+			"url": "https://api.practicesoftwaretesting.com/products",
+			"time": 886,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Each product has all necessary fields": true
+			},
+			"testPassFailCounts": {
+				"Each product has all necessary fields": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				894,
+				897,
+				886
+			],
+			"allTests": [
+				{
+					"Each product has all necessary fields": true
+				},
+				{
+					"Each product has all necessary fields": true
+				},
+				{
+					"Each product has all necessary fields": true
+				}
+			]
+		},
+		{
+			"id": "a5ced357-a8c4-48f1-8d51-5be5f6e5bac7",
+			"name": "測試案例5",
+			"url": "https://api.practicesoftwaretesting.com/products",
+			"time": 896,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Product prices are valid numbers and not negative": true
+			},
+			"testPassFailCounts": {
+				"Product prices are valid numbers and not negative": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				882,
+				909,
+				896
+			],
+			"allTests": [
+				{
+					"Product prices are valid numbers and not negative": true
+				},
+				{
+					"Product prices are valid numbers and not negative": true
+				},
+				{
+					"Product prices are valid numbers and not negative": true
+				}
+			]
+		},
+		{
+			"id": "9bb26adc-5d43-4bf2-8280-6d64dde1dde3",
+			"name": "測試案例6",
+			"url": "https://api.practicesoftwaretesting.com/products?per_page=5",
+			"time": 889,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Pagination returns correct results": false
+			},
+			"testPassFailCounts": {
+				"Pagination returns correct results": {
+					"pass": 0,
+					"fail": 3
+				}
+			},
+			"times": [
+				871,
+				883,
+				889
+			],
+			"allTests": [
+				{
+					"Pagination returns correct results": false
+				},
+				{
+					"Pagination returns correct results": false
+				},
+				{
+					"Pagination returns correct results": false
+				}
+			]
+		},
+		{
+			"id": "92beecd3-1ff4-4a1f-9e89-c04da29ab6a3",
+			"name": "測試案例7",
+			"url": "https://api.practicesoftwaretesting.com/products",
+			"time": 866,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Product image URLs are valid": false
+			},
+			"testPassFailCounts": {
+				"Product image URLs are valid": {
+					"pass": 0,
+					"fail": 3
+				}
+			},
+			"times": [
+				908,
+				864,
+				866
+			],
+			"allTests": [
+				{
+					"Product image URLs are valid": false
+				},
+				{
+					"Product image URLs are valid": false
+				},
+				{
+					"Product image URLs are valid": false
+				}
+			]
+		},
+		{
+			"id": "e91bd04e-f275-450c-b397-d12ba200d3f0",
+			"name": "測試案例8",
+			"url": "https://api.practicesoftwaretesting.com/products?between=price%2C9999%2C10000",
+			"time": 897,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"API handles empty search results": true
+			},
+			"testPassFailCounts": {
+				"API handles empty search results": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				894,
+				1534,
+				897
+			],
+			"allTests": [
+				{
+					"API handles empty search results": true
+				},
+				{
+					"API handles empty search results": true
+				},
+				{
+					"API handles empty search results": true
+				}
+			]
+		},
+		{
+			"id": "f8017211-b6f7-4afe-a165-4cfe8462054c",
+			"name": "測試案例9",
+			"url": "https://api.practicesoftwaretesting.com/products?page=50",
+			"time": 849,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"API handles invalid page numbers": true
+			},
+			"testPassFailCounts": {
+				"API handles invalid page numbers": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				891,
+				870,
+				849
+			],
+			"allTests": [
+				{
+					"API handles invalid page numbers": true
+				},
+				{
+					"API handles invalid page numbers": true
+				},
+				{
+					"API handles invalid page numbers": true
+				}
+			]
+		}
+	],
+	"count": 3,
+	"totalTime": 24688,
+	"collection": {
+		"requests": [
+			{
+				"id": "b8f70e35-80a4-4672-ae03-ba389fac4b57",
+				"method": "GET"
+			},
+			{
+				"id": "b5a7d3cd-6ffb-435d-99e7-3727ff37d0d3",
+				"method": "GET"
+			},
+			{
+				"id": "7c1e87f3-da87-4c35-a883-bd94eafbd82c",
+				"method": "GET"
+			},
+			{
+				"id": "4fb4773c-b5a8-47ea-9fc8-60cf64f4ef50",
+				"method": "GET"
+			},
+			{
+				"id": "a5ced357-a8c4-48f1-8d51-5be5f6e5bac7",
+				"method": "GET"
+			},
+			{
+				"id": "9bb26adc-5d43-4bf2-8280-6d64dde1dde3",
+				"method": "GET"
+			},
+			{
+				"id": "92beecd3-1ff4-4a1f-9e89-c04da29ab6a3",
+				"method": "GET"
+			},
+			{
+				"id": "e91bd04e-f275-450c-b397-d12ba200d3f0",
+				"method": "GET"
+			},
+			{
+				"id": "f8017211-b6f7-4afe-a165-4cfe8462054c",
+				"method": "GET"
+			}
+		]
+	}
+}
