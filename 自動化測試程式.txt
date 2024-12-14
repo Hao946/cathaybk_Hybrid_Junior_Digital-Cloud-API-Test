@@ -1,0 +1,125 @@
+測試案例1
+
+pm.test("Products are within price range 10 to 20", function () {
+    let response = pm.response.json();
+    let products = response.data; 
+
+    pm.expect(products).to.be.an("array"); 
+
+    products.forEach(product => {
+        pm.expect(product.price).to.be.within(10, 20); 
+    });
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+測試案例2
+
+pm.test("Products are sorted by name in ascending order", function () {
+    let response = pm.response.json();
+    let products = response.data;
+
+    pm.expect(products).to.be.an("array");
+
+    for (let i = 0; i < products.length - 1; i++) {
+        pm.expect(products[i].name.localeCompare(products[i + 1].name)).to.be.at.most(0);
+    }
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+測試案例3
+
+pm.test("Products are sorted by name in descending order", function () {
+    let response = pm.response.json();
+    let products = response.data;
+
+    pm.expect(products).to.be.an("array");
+
+    for (let i = 0; i < products.length - 1; i++) {
+        pm.expect(products[i].name.localeCompare(products[i + 1].name)).to.be.at.least(0);
+    }
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+測試案例4
+
+pm.test("Each product has all necessary fields", function () {
+    let response = pm.response.json();
+    let products = response.data;
+
+    pm.expect(products).to.be.an("array");
+
+    products.forEach(product => {
+        pm.expect(product).to.have.all.keys(
+            "id", "name", "description", "price", "is_location_offer", "is_rental", "in_stock", "brand", "category", "product_image"
+        );
+    });
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+測試案例5
+
+pm.test("Product prices are valid numbers and not negative", function () {
+    let response = pm.response.json();
+    let products = response.data;
+
+    pm.expect(products).to.be.an("array");
+
+    products.forEach(product => {
+        pm.expect(product.price).to.be.a("number");
+        pm.expect(product.price).to.be.at.least(0);
+    });
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+測試案例6
+
+pm.test("Pagination returns correct results", function () {
+    let response = pm.response.json();
+
+    pm.expect(response.current_page).to.eql(1); // Assuming page 1 is requested
+    pm.expect(response.data.length).to.eql(5); // Assuming per_page=5 is requested
+    pm.expect(response.total).to.be.a("number");
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+測試案例7
+
+pm.test("Product image URLs are valid", function () {
+    let response = pm.response.json();
+    let products = response.data;
+
+    pm.expect(products).to.be.an("array");
+
+    products.forEach(product => {
+        pm.expect(product.product_image).to.be.a("string");
+        pm.expect(product.product_image).to.match(/^https?:\/\//); 
+    });
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+測試案例8
+
+pm.test("API handles empty search results", function () {
+    let response = pm.response.json();
+
+    pm.expect(response.data).to.be.an("array").that.is.empty; 
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+測試案例9
+
+pm.test("API handles invalid page numbers", function () {
+    let response = pm.response.json();
+
+    pm.expect(response.data).to.be.an("array").that.is.empty;
+});
+
+
